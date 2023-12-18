@@ -1,6 +1,14 @@
+import { useState, useEffect } from 'react'
+import { getCocktails } from '../utilities/cocktail-service'
 import SearchIngredients from './SearchIngredients'
 
 export default function Cocktails() {
+    const [cocktails, setCocktails] = useState([])
+
+    useEffect(() => {
+        getCocktails()
+    })
+
 	return (
 		<>
 			<SearchIngredients />
