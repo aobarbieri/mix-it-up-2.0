@@ -6,7 +6,7 @@ export default function Cocktails() {
     const [cocktails, setCocktails] = useState([])
 
     useEffect(() => {
-        getCocktails()
+        getCocktails('lime')
     })
 
 	return (

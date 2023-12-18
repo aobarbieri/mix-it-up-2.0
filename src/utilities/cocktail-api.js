@@ -1,7 +1,8 @@
 import config from '../config'
 
-export async function index() {
-	const res = await fetch(config.BASE_URL, {
+export async function index(ingredient) {
+    let endpoint = `${config.BASE_URL}=${ingredient}`
+	const res = await fetch(endpoint, {
 		method: 'GET',
 		headers: {
 			'X-Api-Key': config.API_KEY,
