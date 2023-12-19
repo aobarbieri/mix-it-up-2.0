@@ -1,8 +1,9 @@
 import * as cocktailAPI from './cocktail-api'
 
 export async function getCocktails(ingredients) {
+	const formatedIngredients = ingredients.replace(/\s/g, '')
 	try {
-		return await cocktailAPI.index(ingredients)
+		return await cocktailAPI.index(formatedIngredients)
 	} catch (err) {
 		console.log(err.message)
 	}

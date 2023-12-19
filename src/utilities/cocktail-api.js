@@ -2,14 +2,15 @@ import config from '../config'
 
 export async function index(ingredients) {
 	let endpoint = `${config.BASE_URL}/${config.API_KEY}/filter.php?i=${ingredients}`
-	console.log(endpoint)
 	const res = await fetch(endpoint, {
 		method: 'GET',
 		contentType: 'application/json',
 	})
-
 	if (res.ok) {
-		return await res.json()
+		const data = await res.json()
+		if (data.drinks === "None Found") {
+			throw new Error('Invalid request')
+		} else return data
 	} else {
 		throw new Error('Invalid request')
 	}
@@ -30,7 +31,6 @@ export async function show(id) {
 
 export async function list(letter) {
 	let endpoint = `${config.BASE_URL}/${config.API_KEY}/search.php?f=${letter}`
-	console.log(endpoint)
 	const res = await fetch(endpoint, {
 		method: 'GET',
 	})
