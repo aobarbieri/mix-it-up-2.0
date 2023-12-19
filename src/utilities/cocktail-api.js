@@ -27,3 +27,17 @@ export async function show(id) {
 		throw new Error('Invalid request')
 	}
 }
+
+export async function list(letter) {
+	let endpoint = `${config.BASE_URL}/${config.API_KEY}/search.php?f=${letter}`
+	console.log(endpoint)
+	const res = await fetch(endpoint, {
+		method: 'GET',
+	})
+
+	if (res.ok) {
+		return await res.json()
+	} else {
+		throw new Error('Invalid request')
+	}
+}

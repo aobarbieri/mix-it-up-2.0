@@ -21,10 +21,6 @@ body {
   color      : var(--font-primary);
 }
 
-header {
-  background: var(--bg-header);
-}
-
 main {
   background-image: url('./assets/images/background.svg');
   min-height      : var(--main-height);
@@ -55,6 +51,9 @@ form input::placeholder {
   margin: 0 .94rem;
 }
 
+.bg-header {
+  background: var(--bg-header);
+}
 
 .bg-light-grey {
   background-color: var(--bg-light-grey);

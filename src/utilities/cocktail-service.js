@@ -33,3 +33,12 @@ export async function getCocktailIngredients(id) {
 		console.log(err.message)
 	}
 }
+
+export async function getCocktailList(letter) {
+	try {
+		const data = await cocktailAPI.list(letter)
+		return data.drinks
+	} catch (err) {
+		console.log(err.message)
+	}
+}
