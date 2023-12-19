@@ -13,7 +13,6 @@ export default function Cocktails() {
 	}
 
 	document.title = 'Mix It Up'
-
 	return (
 		<>
 			<section className='bg-header'>

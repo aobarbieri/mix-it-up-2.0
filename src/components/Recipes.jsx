@@ -19,7 +19,7 @@ export default function Recipes() {
 			<h2>A to Z List of Cocktails</h2>
 			<div>
 				{alphabet.map((letter) => (
-					<button key={letter} value={letter} onClick={handleRequest}>
+					<button className='px-2' key={letter} value={letter} onClick={handleRequest}>
 						{letter.toUpperCase()}
 					</button>
 				))}

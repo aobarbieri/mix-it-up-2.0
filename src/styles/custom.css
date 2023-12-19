@@ -1,0 +1,81 @@
+main {
+    background-image: url('../assets/images/background.svg');
+    min-height      : var(--main-height);
+}
+
+footer {
+    background-color: var(--bg-footer);
+}
+
+ul,
+a {
+    text-decoration: none;
+}
+
+form {
+    width: 100%;
+}
+
+form input {
+    padding      : 0.3125rem 0.625rem;
+    border       : 1px solid var(--border-light);
+    border-radius: 0.25rem;
+    height       : 2.5rem;
+    width: 100%;
+}
+
+form input::placeholder {
+    color         : var(--font-primary);
+    line-height   : 1.875rem;
+    letter-spacing: 0.01rem;
+}
+
+.rounded-input {
+    border-radius: 1.6875rem;
+    border       : 1px solid var(--border-light);
+    background   : var(--bg-light-grey);
+    padding      : 0.3125rem 0.9375rem 0.3125rem 2.7rem;
+}
+
+.rounded-input::placeholder {
+    color: var(--text-disabled)
+}
+
+.app-default-width {
+    margin: 0 .94rem;
+}
+
+.bg-header {
+    background: var(--bg-header);
+}
+
+.bg-light-grey {
+    background-color: var(--bg-light-grey);
+}
+
+.link-secondary:hover {
+    text-decoration          : underline;
+    text-decoration-color    : var(--green-secondary);
+    text-decoration-thickness: 1.5px;
+    text-underline-offset    : .6rem;
+    cursor                   : pointer;
+}
+
+.cocktail-thumbnail {
+    width        : 19.0625rem;
+    height       : 19.0625rem;
+    border-radius: 0.55256rem;
+}
+
+@media (min-width: 768px) {
+    .app-default-width {
+        max-width: 78.5625rem;
+        margin   : 0 auto;
+    }
+
+    .cocktail-thumbnail {
+        width        : 16.78963rem;
+        height       : 16.78963rem;
+        border-radius: 0.67156rem;
+    }
+}
