@@ -1,13 +1,3 @@
-@font-face {
-  font-family: 'Avenir-Roman';
-  src        : url('Avenir-Roman.eot');
-  src        : url('Avenir-Roman.woff2') format('woff2'),
-    url('Avenir-Roman.woff') format('woff'),
-    url('Avenir-Roman.ttf') format('truetype');
-  font-weight: normal;
-  font-style : normal;
-}
-
 :root {
   --green-secondary: #095a5a;
   --bg-header      : linear-gradient(180deg, #094B4B 0%, #095A5A 100%);
@@ -75,6 +65,7 @@ form input::placeholder {
   text-decoration-color    : var(--green-secondary);
   text-decoration-thickness: 1.5px;
   text-underline-offset    : .6rem;
+  cursor                   : pointer;
 }
 
 .cocktail-thumbnail {

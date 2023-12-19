@@ -9,24 +9,20 @@ export async function index(ingredients) {
 	})
 
 	if (res.ok) {
-		const cocktails = await res.json()
-		return cocktails
+		return await res.json()
 	} else {
 		throw new Error('Invalid request')
 	}
 }
 
 export async function show(id) {
-	let endpoint = `${config.BASE_URL}/${config.API_KEY}/lookup.php?iid=${id}`
-	console.log(endpoint)
+	let endpoint = `${config.BASE_URL}/${config.API_KEY}/lookup.php?i=${id}`
 	const res = await fetch(endpoint, {
-		method: 'GET'
+		method: 'GET',
 	})
 
 	if (res.ok) {
-		const cocktail = res.json()
-		console.log(cocktail)
-		return cocktail
+		return await res.json()
 	} else {
 		throw new Error('Invalid request')
 	}

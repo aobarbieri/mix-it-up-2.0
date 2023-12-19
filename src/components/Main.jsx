@@ -1,5 +1,6 @@
 import Cocktails from './Cocktails'
-import CocktailDetails from './CocktailDetails'
+import Show from './Show'
+import { Route, Routes } from 'react-router-dom'
 
 export default function Main() {
 	return (
@@ -9,8 +10,10 @@ export default function Main() {
 					Select which ingredients you have, and we&#39;ll show you all the different cocktails you can make.
 				</p>
 			</header>
-			<Cocktails />
-			<CocktailDetails />
+			<Routes>
+				<Route path='/' element={<Cocktails />} />
+				<Route path='/cocktail/:id' element={<Show />} />
+			</Routes>
 		</main>
 	)
 }
