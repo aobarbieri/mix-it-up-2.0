@@ -12,6 +12,8 @@ export default function Cocktails() {
 		if (cocktailsData) setCocktails(cocktailsData.drinks)
 	}
 
+	document.title = 'Mix It Up'
+
 	return (
 		<>
 			<section className='bg-header'>

@@ -6,13 +6,14 @@ export default function Recipes() {
 	const [cocktails, setCocktails] = useState([])
 
 	async function handleRequest(e) {
-		console.log(e)
 		const cocktailsData = await getCocktailList(e.target.value)
 		if (cocktailsData) setCocktails(cocktailsData)
 	}
 
 	const alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 
+    document.title = 'Mix It Up - Recipes'
+    
 	return (
 		<section className='app-default-width bg-white'>
 			<h2>A to Z List of Cocktails</h2>

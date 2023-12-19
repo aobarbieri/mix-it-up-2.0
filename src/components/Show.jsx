@@ -22,6 +22,8 @@ export default function Show() {
         getIngredients()
 	}, [])
 
+	document.title = 'Mix It Up - ' + cocktail.strDrink
+
 	return (
 		<section className='app-default-width bg-white'>
 			<a>Back</a>
