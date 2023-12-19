@@ -9,11 +9,13 @@ export default function Header() {
 				<img className='' src={hamburgerMenu} alt='menu icon' />
 			</button>
 
-			<img className='w-28 mb-2 md:m-0' src={logo} alt='Mix it up logo' />
+			<img className='w-28 md:w-32 mb-2 md:m-0' src={logo} alt='Mix it up logo' />
 
-			<div className='md:flex gap-x-16'>
+			<div className='md:flex items-center gap-x-16'>
 				<ul className='hidden md:flex gap-x-16'>
-					<li>Cocktail calculator</li>
+					<li>
+						<a className='link-secondary'>Cocktail calculator</a>
+					</li>
 					<li>Recipes</li>
 					<li>Login/sign up</li>
 				</ul>
