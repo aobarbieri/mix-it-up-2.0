@@ -3,12 +3,14 @@ import CocktailDetails from './CocktailDetails'
 
 export default function Main() {
 	return (
-		<>
-			<section>
-				<p>Select which ingredients you have, and we&#39;ll show you all the different cocktails you can create.</p>
-			</section>
+		<main>
+			<header>
+				<p className='app-default-width py-5 md:p-0 text-white'>
+					Select which ingredients you have, and we&#39;ll show you all the different cocktails you can make.
+				</p>
+			</header>
 			<Cocktails />
 			<CocktailDetails />
-		</>
+		</main>
 	)
 }

@@ -1,3 +1,3 @@
 export default function CocktailDetails() {
-    return <></>
+    return <section className='app-default-width'></section>
 }

@@ -24,7 +24,7 @@ export default function SearchIngredients({ findCocktails }) {
 	}
 
 	return (
-		<section>
+		<section className='bg-white'>
 			<h2>Your ingredients</h2>
 			<form onSubmit={handleSubmit}>
 				<input type='search' placeholder='Search ingredients' name='search' onChange={handleChange} />
