@@ -92,6 +92,12 @@ form input::placeholder {
     bottom: -2.5px;
 }
 
+.back-btn {
+    color: var(--dark-green);
+    display: flex;
+    align-items: center;
+}
+
 @media (min-width: 768px) {
     main {
         min-height: var(--main-height);
