@@ -71,6 +71,27 @@ form input::placeholder {
     border-radius: 0.55256rem;
 }
 
+.label {
+    color: var(--font-secondary);
+    font-size: .88406rem;
+    font-weight: 600;
+    padding: .28rem .55rem;
+    border: .884px solid var(--border-light);
+    border-radius: .27625rem;
+    font-family: 'Source Sans 3';
+}
+
+.clock {
+    position: relative;    
+}
+
+.clock:before {
+    position: absolute;
+    content: url('../assets/icons/clock.svg');
+    left: -18px;
+    bottom: -2.5px;
+}
+
 @media (min-width: 768px) {
     main {
         min-height: var(--main-height);
@@ -85,5 +106,12 @@ form input::placeholder {
         width        : 16.78963rem;
         height       : 16.78963rem;
         border-radius: 0.67156rem;
+    }
+    .container-min-height {
+        min-height: 35rem;
+    }
+
+    .container-cocktail {
+        width: 16.78963rem;
     }
 }

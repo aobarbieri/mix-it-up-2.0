@@ -1,4 +1,5 @@
 @import 'custom.css';
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600&display=swap');
 
 :root {
   --green-secondary: #095a5a;
@@ -22,7 +23,7 @@
 
 body {
   font-size  : 16px;
-  font-family: 'Avenir-Roman', sans-serif;
+  font-family: 'Avenir-Roman', 'Source Sans 3', sans-serif;
   color      : var(--font-primary);
 }
 

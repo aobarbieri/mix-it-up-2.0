@@ -25,7 +25,7 @@ export default function Cocktails() {
 			<section className='app-default-width mt-5 md:mt-0'>
 				<SearchIngredients findCocktails={handleRequest} />
 
-				<div className='bg-light-grey p-5 pb-10 md:pt-7 md:pb-16 md:px-10 flex flex-col gap-y-5 md:gap-y-7 rounded-b'>
+				<div className='bg-light-grey p-5 pb-10 md:pt-7 md:pb-16 md:px-10 flex flex-col gap-y-5 md:gap-y-7 rounded-b container-min-height'>
 					<div className='flex items-center gap-x-3.5'>
 						<img src={cocktailsIcon} alt='Cocktails' />
 						<h2 className='font-bold text-xl md:text-2xl leading-7'>Cocktails you can make</h2>
@@ -37,19 +37,19 @@ export default function Cocktails() {
 						{/* Only loop if there are results from the api */}
 						{cocktails.map((c) => (
 							<Link to={`/cocktail/${c.idDrink}`} key={c.idDrink}>
-								<div>
+								<div className='container-cocktail'>
 									<img className='cocktail-thumbnail' src={c.strDrinkThumb} alt='Drink picture' />
 
-									<div className='flex justify-between'>
-										<h3>{c.strDrink}</h3>
+									<div className='flex justify-between mt-2 mb-1 text-sm'>
+										<h3 className='font-black tracking-wide'>{c.strDrink}</h3>
 										{/* calculate preparation time based on the number of ingredients */}
-										<p>2min</p>
+										<p className='clock'>2 min</p>
 									</div>
 									{/* List of characteristics - this info comes from a different api call*/}
-									<ul className='flex flex-wrap gap-x-1.5'>
-										<li>strCategory</li>
-										<li>strGlass</li>
-										<li>strAlcoholic</li>
+									<ul className='flex flex-wrap gap-x-1.5 pb-7'>
+										<li className='label'>strCategory</li>
+										<li className='label'>strGlass</li>
+										<li className='label'>strAlcoholic</li>
 									</ul>
 								</div>
 							</Link>
