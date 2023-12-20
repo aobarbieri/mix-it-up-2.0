@@ -21,7 +21,7 @@ form input {
     border       : 1px solid var(--border-light);
     border-radius: 0.25rem;
     height       : 2.5rem;
-    width: 100%;
+    width        : 100%;
 }
 
 form input::placeholder {
@@ -51,6 +51,10 @@ form input::placeholder {
 
 .bg-light-grey {
     background-color: var(--bg-light-grey);
+}
+
+.color-secondary {
+    color: var(--font-secondary);
 }
 
 .link-secondary:hover {
