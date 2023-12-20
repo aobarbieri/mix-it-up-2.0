@@ -72,29 +72,29 @@ form input::placeholder {
 }
 
 .label {
-    color: var(--font-secondary);
-    font-size: .88406rem;
-    font-weight: 600;
-    padding: .28rem .55rem;
-    border: .884px solid var(--border-light);
+    color        : var(--font-secondary);
+    font-size    : .88406rem;
+    font-weight  : 600;
+    padding      : .28rem .55rem;
+    border       : .884px solid var(--border-light);
     border-radius: .27625rem;
-    font-family: 'Source Sans 3';
+    font-family  : 'Source Sans 3';
 }
 
 .clock {
-    position: relative;    
+    position: relative;
 }
 
 .clock:before {
     position: absolute;
-    content: url('../assets/icons/clock.svg');
-    left: -18px;
-    bottom: -2.5px;
+    content : url('../assets/icons/clock.svg');
+    left    : -18px;
+    bottom  : -2.5px;
 }
 
 .back-btn {
-    color: var(--dark-green);
-    display: flex;
+    color      : var(--dark-green);
+    display    : flex;
     align-items: center;
 }
 
@@ -108,11 +108,17 @@ form input::placeholder {
         margin   : 0 auto;
     }
 
+    .cocktail-show-wrapper {
+        max-width: 78.5625rem;
+        margin   : 0 auto;
+    }
+
     .cocktail-thumbnail {
         width        : 16.78963rem;
         height       : 16.78963rem;
         border-radius: 0.67156rem;
     }
+
     .container-min-height {
         min-height: 35rem;
     }

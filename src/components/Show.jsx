@@ -27,23 +27,27 @@ export default function Show() {
 	document.title = 'Mix It Up - ' + cocktail.strDrink
 
 	return (
-		<section className='bg-white px-4 '>
-			<div className='flex flex-col gap-y-5 '>
-				<Link to={'/'} className='back-btn font-bold'><img src={backIcon}></img>Back</Link>
-				<h1 className='text-2xl font-black tracking-wide'>{cocktail.strDrink}</h1>
-				<img className='h-80 mx-auto w-full' src={cocktail.strDrinkThumb} alt='' />
-			</div>
+		<section className='md:pt-4 md:pb-24'>
+			<div className='cocktail-show-wrapper bg-white pt-4 px-4 md:py-8 md:px-11 md:rounded-sm'>
+				<div className='flex flex-col gap-y-5 '>
+					<Link to={'/'} className='back-btn font-bold'>
+						<img src={backIcon}></img>Back
+					</Link>
+					<h1 className='text-2xl font-black tracking-wide'>{cocktail.strDrink}</h1>
+					<img className='h-80 w-full md:w-96' src={cocktail.strDrinkThumb} alt='' />
+				</div>
 
-			<div className='flex flex-col gap-y-4 font-black my-10'>
-				<h2 className='text-xl'>Ingredients</h2>
-				{ingredients.map((el) => {
-					return <p key={el}>{el}</p>
-				})}
-			</div>
+				<div className='flex flex-col gap-y-4 my-10'>
+					<h2 className='text-xl font-black'>Ingredients</h2>
+					{ingredients.map((el) => {
+						return <p key={el}>{el}</p>
+					})}
+				</div>
 
-			<div>
-				<h2 className='font-black text-xl mb-4'>Instructions</h2>
-				<p className='pb-10'>{cocktail.strInstructions}</p>
+				<div>
+					<h2 className='font-black text-xl mb-4'>Instructions</h2>
+					<p className='pb-10'>{cocktail.strInstructions}</p>
+				</div>
 			</div>
 		</section>
 	)
