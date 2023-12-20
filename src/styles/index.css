@@ -10,7 +10,8 @@
   --font-secondary : #4a4a4a;
   --text-disabled  : #878787;
   /* subtract header and footer's height */
-  --main-height    : calc(100vh - 5rem - 15rem)
+  --main-height    : calc(100vh - 5rem - 11rem);
+  --main-mobile-height: calc(100vh - 5rem - 15rem);
 }
 
 * {

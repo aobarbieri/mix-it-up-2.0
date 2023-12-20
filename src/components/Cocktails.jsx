@@ -15,7 +15,7 @@ export default function Cocktails() {
 
 	document.title = 'Mix It Up'
 	return (
-		<div className='pb-5'>
+		<div className='pb-5 md:pb-36'>
 			<section className='bg-header'>
 				<p className='app-default-width py-5 md:p-0 md:py-8 text-white'>
 					Select which ingredients you have, and we&#39;ll show you all the different cocktails you can make.
@@ -25,7 +25,7 @@ export default function Cocktails() {
 			<section className='app-default-width mt-5 md:mt-0'>
 				<SearchIngredients findCocktails={handleRequest} />
 
-				<div className='bg-light-grey p-5 pb-10 md:p-10 flex flex-col gap-y-5 rounded-b md:rounded-none'>
+				<div className='bg-light-grey p-5 pb-10 md:pt-7 md:pb-16 md:px-10 flex flex-col gap-y-5 md:gap-y-7 rounded-b'>
 					<div className='flex items-center gap-x-3.5'>
 						<img src={cocktailsIcon} alt='Cocktails' />
 						<h2 className='font-bold text-xl md:text-2xl leading-7'>Cocktails you can make</h2>

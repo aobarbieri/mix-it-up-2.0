@@ -1,6 +1,6 @@
 main {
     background-image: url('../assets/images/background.svg');
-    min-height      : var(--main-height);
+    min-height      : var(--main-mobile-height);
 }
 
 footer {
@@ -72,6 +72,10 @@ form input::placeholder {
 }
 
 @media (min-width: 768px) {
+    main {
+        min-height: var(--main-height);
+    }
+
     .app-default-width {
         max-width: 78.5625rem;
         margin   : 0 auto;
