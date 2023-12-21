@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react'
 import { useParams } from 'react-router'
 import { Link } from 'react-router-dom'
-import { getCocktail, getCocktailIngredients } from '../utilities/cocktail-service'
-import backIcon from '../assets/icons/back.svg'
+import { getCocktail, getCocktailIngredients } from '../../utilities/cocktail-service'
+import backIcon from '../../assets/icons/back.svg'
 
 export default function Show() {
 	const { id } = useParams()

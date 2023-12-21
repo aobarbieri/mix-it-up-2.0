@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { getCocktailList } from '../utilities/cocktail-service'
+import { getCocktailList } from '../../utilities/cocktail-service'
 
 export default function Recipes() {
 	const [cocktails, setCocktails] = useState([])

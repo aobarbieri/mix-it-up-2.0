@@ -1,0 +1,58 @@
+.cocktail-thumbnail {
+    max-width    : 19.0625rem;
+    max-height   : 19.0625rem;
+    border-radius: 0.55256rem;
+}
+
+.label {
+    color        : var(--font-secondary);
+    font-size    : .88406rem;
+    font-weight  : 600;
+    padding      : .28rem .55rem;
+    border       : .884px solid var(--border-light);
+    border-radius: .27625rem;
+    font-family  : 'Source Sans 3';
+}
+
+.clock {
+    position: relative;
+}
+
+.clock:before {
+    position: absolute;
+    content : url('../../assets/icons/clock.svg');
+    left    : -18px;
+    bottom  : -2.5px;
+}
+
+.slick-prev {
+    left: -20px;
+}
+
+.slick-next {
+    right: -20px;
+}
+
+.slick-prev::before {
+    content: url('../../assets/icons/chevron-left.svg')
+}
+
+.slick-next::before {
+    content: url('../../assets/icons/chevron-right.svg');
+}
+
+@media (min-width: 768px) {
+    .cocktail-thumbnail {
+        width        : 16.78963rem;
+        height       : 16.78963rem;
+        border-radius: 0.67156rem;
+    }
+
+    .container-cocktail {
+        width: 16.78963rem;
+    }
+
+    .slick-prev {
+        left: -30px;
+    }
+}

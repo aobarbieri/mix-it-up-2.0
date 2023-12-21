@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
-import logo from '../assets/images/logo.svg'
-import hamburgerMenu from '../assets/icons/hamburger-menu.svg'
-import search from '../assets/icons/search.svg'
+import logo from '../../assets/images/logo.svg'
+import hamburgerMenu from '../../assets/icons/hamburger-menu.svg'
+import search from '../../assets/icons/search.svg'
 
 export default function Header() {
 	return (

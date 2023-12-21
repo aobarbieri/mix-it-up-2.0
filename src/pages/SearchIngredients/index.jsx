@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import ingredientsIcon from '../assets/images/ingredients.svg'
-import searchIcon from '../assets/icons/search.svg'
+import ingredientsIcon from '../../assets/images/ingredients.svg'
+import searchIcon from '../../assets/icons/search.svg'
 
 export default function SearchIngredients({ findCocktails }) {
 	const [ingredients, setIngredients] = useState({

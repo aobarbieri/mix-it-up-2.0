@@ -1,7 +1,7 @@
 import { Route, Routes } from 'react-router-dom'
-import Cocktails from './Cocktails'
-import Show from './Show'
-import Recipes from './Recipes'
+import Cocktails from '../../pages/Cocktails'
+import Show from '../../pages/Show'
+import Recipes from '../../pages/Recipes'
 
 export default function Main() {
 	return (
