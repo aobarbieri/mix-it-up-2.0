@@ -1,7 +1,15 @@
+<div align="center">
+  
+  ![Group 21](https://github.com/aobarbieri/mix-it-up-2.0/assets/51036021/aa12045b-1593-4739-b161-40af50d85471)
+
+</div>
+
 ## About the Project
 Say goodbye to endless searches for the perfect drink recipe – simply input the ingredients you have, and let Mix It Up do the rest. Our intuitive platform swiftly sifts through a vast database to curate a tailored list of tantalizing drink recipes, crafted just for you. Elevate your mixology game, experiment with flavors, and impress your guests with unique concoctions. Whether you're a seasoned bartender or a novice enthusiast, Mix It Up makes every sip an adventure. Cheers to the art of mixology at your fingertips!
 
 ## User Flow
+<img width="1448" alt="mix it up" src="https://github.com/aobarbieri/mix-it-up-2.0/assets/51036021/4455ffc3-1ea5-4567-ab17-a18ca3e1b6d9">
+<img width="1452" alt="mix it up" src="https://github.com/aobarbieri/mix-it-up-2.0/assets/51036021/695f8f4b-1ba3-43ed-92de-eb90c6eb7b55">
 
 
 ## Technologies Used
