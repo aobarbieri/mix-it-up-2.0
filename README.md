@@ -26,3 +26,9 @@ Say goodbye to endless searches for the perfect drink recipe – simply input th
 * View the Trello board for this project: https://trello.com/b/83857RgY/mix-it-up
 
 ## Next Steps
+* Populate the "Your Ingredients" section with the selected ingredients for a better UX.
+* Save the search so while the user navigate through the app their last input won't be lost.
+* Add a dropdonw so the user can select popular ingredients instead of typing them.
+* User can create an account
+* User can save drinks to their favorite list and access it after.
+* Allow for global search in the app.
