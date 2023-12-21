@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { getCocktails } from '../utilities/cocktail-service'
+import { getCocktails, getLabels } from '../utilities/cocktail-service'
 import SearchIngredients from './SearchIngredients'
 import cocktailsIcon from '../assets/images/cocktails.svg'
 import Slider from 'react-slick'
@@ -14,15 +14,16 @@ function Arrow(props) {
 
 export default function Cocktails() {
 	const [cocktails, setCocktails] = useState([])
-	//const [cocktailInfo, setCocktailInfo] = useState([])
+	//const [labels, setLabels] = useState([])
 	const [results, setResults] = useState(false)
 
 	async function handleRequest(ingredients) {
 		const cocktailsData = await getCocktails(ingredients)
-		if (cocktailsData && cocktailsData !== "None Found") setCocktails(cocktailsData.drinks)
-		setResults(true)
+		if (cocktailsData && cocktailsData !== "None Found") {
+			setCocktails(cocktailsData.drinks)
+			setResults(true)
+		}
 		if (cocktailsData === "None Found") setResults(false)
-		
 	}
 
 	const renderCocktails = () => (
@@ -35,14 +36,14 @@ export default function Cocktails() {
 						<div className='flex justify-between mt-2 mb-1 text-sm'>
 							<h3 className='font-black tracking-wide'>{c.strDrink}</h3>
 							{/* calculate preparation time based on the number of ingredients */}
-							<p className='clock'>2 min</p>
+							<p className='clock'>3 min</p>
 						</div>
 						{/* List of characteristics - this info comes from a different api call*/}
-						<ul className='flex flex-wrap gap-x-1.5 pb-7'>
+						{/* <ul className='flex flex-wrap gap-x-1.5 pb-7'>
 							<li className='label'>strCategory</li>
 							<li className='label'>strGlass</li>
 							<li className='label'>strAlcoholic</li>
-						</ul>
+						</ul> */}
 					</div>
 				</Link>
 			))}
@@ -53,7 +54,7 @@ export default function Cocktails() {
 
 	const sliderSettings = {
 		dots: true,
-		infinite: true,
+		infinite: false,
 		speed: 500,
 		slidesToShow: 4,
 		slidesToScroll: 4,

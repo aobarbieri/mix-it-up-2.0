@@ -43,3 +43,13 @@ export async function getCocktailList(letter) {
 		console.log(err.message)
 	}
 }
+
+export async function getLabels(id) {
+	try {
+		const data = await cocktailAPI.show(id)
+		const labels = [data.drinks[0].strCategory, data.drinks[0].strAlcoholic, data.drinks[0].strGlass]
+		return labels
+	} catch (err) {
+		console.log(err.message)
+	}
+}
