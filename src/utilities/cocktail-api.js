@@ -9,7 +9,7 @@ export async function index(ingredients) {
 	if (res.ok) {
 		const data = await res.json()
 		if (data.drinks === "None Found") {
-			throw new Error('Invalid request')
+			return "None Found"
 		} else return data
 	} else {
 		throw new Error('Invalid request')
