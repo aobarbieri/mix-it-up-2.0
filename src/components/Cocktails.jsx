@@ -3,6 +3,15 @@ import { Link } from 'react-router-dom'
 import { getCocktails } from '../utilities/cocktail-service'
 import SearchIngredients from './SearchIngredients'
 import cocktailsIcon from '../assets/images/cocktails.svg'
+import Slider from 'react-slick'
+import 'slick-carousel/slick/slick.css'
+import 'slick-carousel/slick/slick-theme.css'
+
+
+function NextArrow(props) {
+	const { className, style, onClick } = props
+	return <div className={className} style={{ ...style, display: 'block', background: 'red' }} onClick={onClick} />
+}
 
 export default function Cocktails() {
 	const [cocktails, setCocktails] = useState([])
@@ -11,6 +20,37 @@ export default function Cocktails() {
 	async function handleRequest(ingredients) {
 		const cocktailsData = await getCocktails(ingredients)
 		if (cocktailsData) setCocktails(cocktailsData.drinks)
+	}
+	
+	const settings = {
+		dots: true,
+		infinite: true,
+		speed: 500,
+		slidesToShow: 4,
+		slidesToScroll: 4,
+		initialSlide: 0,
+		nextArrow: <NextArrow />,
+      prevArrow: <NextArrow />,
+		responsive: [
+			{
+				breakpoint: 1025,
+				settings: {
+					slidesToShow: 3,
+				},
+			},
+			{
+				breakpoint: 821,
+				settings: {
+					slidesToShow: 2,
+				},
+			},
+			{
+				breakpoint: 500,
+				settings: {
+					slidesToShow: 1,
+				},
+			},
+		],
 	}
 
 	document.title = 'Mix It Up'
@@ -33,28 +73,29 @@ export default function Cocktails() {
 					{/* Apply conditional visibility here */}
 					<p className='color-secondary'>There are no recipes based on the ingredients you selected.</p>
 
-					<section className='flex flex-wrap justify-between'>
-						{/* Only loop if there are results from the api */}
-						{cocktails.map((c) => (
-							<Link to={`/cocktail/${c.idDrink}`} key={c.idDrink}>
-								<div className='container-cocktail'>
-									<img className='cocktail-thumbnail' src={c.strDrinkThumb} alt='Drink picture' />
+						{/* <section className='md:flex gap-x-4'> */}
+					<Slider {...settings}>
+							{cocktails.map((c) => (
+								<Link to={`/cocktail/${c.idDrink}`} key={c.idDrink}>
+									<div className='container-cocktail'>
+										<img className='cocktail-thumbnail' src={c.strDrinkThumb} alt='Drink picture' />
 
-									<div className='flex justify-between mt-2 mb-1 text-sm'>
-										<h3 className='font-black tracking-wide'>{c.strDrink}</h3>
-										{/* calculate preparation time based on the number of ingredients */}
-										<p className='clock'>2 min</p>
+										<div className='flex justify-between mt-2 mb-1 text-sm'>
+											<h3 className='font-black tracking-wide'>{c.strDrink}</h3>
+											{/* calculate preparation time based on the number of ingredients */}
+											<p className='clock'>2 min</p>
+										</div>
+										{/* List of characteristics - this info comes from a different api call*/}
+										<ul className='flex flex-wrap gap-x-1.5 pb-7'>
+											<li className='label'>strCategory</li>
+											<li className='label'>strGlass</li>
+											<li className='label'>strAlcoholic</li>
+										</ul>
 									</div>
-									{/* List of characteristics - this info comes from a different api call*/}
-									<ul className='flex flex-wrap gap-x-1.5 pb-7'>
-										<li className='label'>strCategory</li>
-										<li className='label'>strGlass</li>
-										<li className='label'>strAlcoholic</li>
-									</ul>
-								</div>
-							</Link>
-						))}
-					</section>
+								</Link>
+							))}
+					</Slider>
+						{/* </section> */}
 				</div>
 			</section>
 		</div>
