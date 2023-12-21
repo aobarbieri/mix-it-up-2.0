@@ -98,6 +98,18 @@ form input::placeholder {
     align-items: center;
 }
 
+.slick-prev {
+    left: -30px;
+}
+
+.slick-prev::before {
+    content: url('../assets/icons/chevron-left.svg');
+}
+
+.slick-next::before {
+    content: url('../assets/icons/chevron-right.svg');
+}
+
 @media (min-width: 768px) {
     main {
         min-height: var(--main-height);
