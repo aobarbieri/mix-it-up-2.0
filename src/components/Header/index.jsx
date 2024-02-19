@@ -1,9 +1,14 @@
 import { Link } from 'react-router-dom'
+import { useAuth0 } from '@auth0/auth0-react'
+import LoginButton from '../Auth/LoginButton'
+import LogoutButton from '../Auth/LogoutButton'
 import logo from '../../assets/images/logo.svg'
 import hamburgerMenu from '../../assets/icons/hamburger-menu.svg'
 import search from '../../assets/icons/search.svg'
 
 export default function Header() {
+	const { user, isAuthenticated, isLoading } = useAuth0()
+
 	return (
 		<header>
 			<nav className='app-default-width flex justify-between items-center h-20 bg-white pt-6 md:p-0'>
@@ -21,7 +26,17 @@ export default function Header() {
 						<li className='link-secondary'>
 							<Link to={'/recipes'}>Recipes</Link>
 						</li>
-						<li className='link-secondary'>Login/sign up</li>
+						{!isLoading ? (
+							isAuthenticated ? (
+								<li className='link-secondary'>
+									<Link to='/profile'>Profile</Link> || <LogoutButton />
+								</li>
+							) : (
+								<li className='link-secondary'>
+									<LoginButton />
+								</li>
+							)
+						) : null}
 					</ul>
 					<img className='' src={search} alt='search icon' />
 				</div>
