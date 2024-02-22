@@ -19,6 +19,12 @@ export default function Show() {
 		setIngredients(data)
 	}
 
+	const handleSaveFavorite = () => {
+		console.log(cocktail)
+		// send the id to the DB this is how we will identify each item in the list of favorites
+		// the list of favorites need to be associated with a user in the DB
+	}
+
 	useEffect(() => {
 		handleRequest()
 		getIngredients()
@@ -33,6 +39,9 @@ export default function Show() {
 					<Link to={'/'} className='back-btn font-bold'>
 						<img src={backIcon}></img>Back
 					</Link>
+
+					<button onClick={handleSaveFavorite}>Save to favorites</button>
+
 					<h1 className='text-2xl font-black tracking-wide'>{cocktail.strDrink}</h1>
 					<img className='h-80 w-full md:w-96' src={cocktail.strDrinkThumb} alt='' />
 				</div>

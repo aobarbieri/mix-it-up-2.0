@@ -4,6 +4,7 @@ import { getCocktailList } from '../../utilities/cocktail-service'
 
 export default function Recipes() {
 	const [cocktails, setCocktails] = useState([])
+	const [isLoading, setIsLoading] = useState(true)
 
 	async function handleRequest(e) {
 		const cocktailsData = await getCocktailList(e.target.value)
