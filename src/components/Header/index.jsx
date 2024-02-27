@@ -7,7 +7,7 @@ import hamburgerMenu from '../../assets/icons/hamburger-menu.svg'
 import search from '../../assets/icons/search.svg'
 
 export default function Header() {
-	const { user, isAuthenticated, isLoading } = useAuth0()
+	const { isAuthenticated, isLoading } = useAuth0()
 
 	return (
 		<header>
@@ -28,9 +28,14 @@ export default function Header() {
 						</li>
 						{!isLoading ? (
 							isAuthenticated ? (
-								<li className='link-secondary'>
-									<Link to='/profile'>Profile</Link> || <LogoutButton />
-								</li>
+								<>
+									<li className='link-secondary'>
+										<Link to='/favorites'>My Favorites</Link>
+									</li>
+									<li className='link-secondary'>
+										<Link to='/profile'>Profile</Link> || <LogoutButton />
+									</li>
+								</>
 							) : (
 								<li className='link-secondary'>
 									<LoginButton />
