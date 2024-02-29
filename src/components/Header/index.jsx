@@ -29,7 +29,9 @@ export default function Header() {
 							<Link to='/profile'>Profile</Link>
 						</li>
 
-						<li className='link-secondary'>Login/Logout</li>
+						<li className='link-secondary'>
+							<Link to='/login'>Login/Logout</Link>
+						</li>
 					</ul>
 					<img className='' src={search} alt='search icon' />
 				</div>
