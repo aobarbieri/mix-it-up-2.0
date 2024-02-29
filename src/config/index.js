@@ -1,6 +1,7 @@
-const { VITE_BASE_URL, VITE_API_KEY } = import.meta.env
+const { VITE_BASE_URL, VITE_API_KEY, VITE_BACKEND_URL } = import.meta.env
 
 export default {
 	BASE_URL: VITE_BASE_URL,
 	API_KEY: VITE_API_KEY,
+	BACKEND_URL: VITE_BACKEND_URL,
 }

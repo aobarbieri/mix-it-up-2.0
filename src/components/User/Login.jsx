@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { createAccount } from '../../utilities/user-service'
+import { login } from '../../utilities/user-service'
 
 export default function Login() {
 	const [user, setUser] = useState({
@@ -13,7 +13,8 @@ export default function Login() {
 
 	async function handleSubmit(e) {
 		e.preventDefault()
-		const userDate = await createAccount(user)
+		const userData = await login(user)
+		console.log(userData)
 
 		setUser({
 			email: '',
