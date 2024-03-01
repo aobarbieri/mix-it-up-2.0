@@ -10,10 +10,10 @@ export async function login(user) {
 	}
 }
 
-export async function createAccount(user) {
+export async function signup(user) {
 	try {
-		const newUser = await userAPI.signup(user)
-		return newUser
+		const res = await userAPI.signup(user)
+		return res
 	} catch (err) {
 		console.log(err)
 		throw new Error(err)
