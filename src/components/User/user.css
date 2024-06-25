@@ -1,0 +1,18 @@
+.user-container {
+    padding: 4rem 0 5rem;
+}
+
+.user-content {
+    width: 24.75rem;
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-light);
+    box-shadow: 2px 2px 48px -14px rgba(0,0,0,0.61);
+    -webkit-box-shadow: 2px 2px 48px -14px rgba(0,0,0,0.61);
+    -moz-box-shadow: 2px 2px 48px -14px rgba(0,0,0,0.61);
+}
+
+.user-content input[type="submit"]{
+    margin: 1rem 0;
+}

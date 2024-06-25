@@ -1,9 +1,15 @@
 @import 'custom.css';
+@import 'helpers.css';
+@import 'input.css';
+@import 'buttons.css';
 @import '../pages/Cocktails/cocktails.css';
+@import '../components/User/user.css';
+
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600&display=swap');
 
 :root {
   --green-secondary   : #095a5a;
+  --banana: #FFD53F;
   --bg-header         : linear-gradient(180deg, #094B4B 0%, #095A5A 100%);
   --bg-footer         : #212121;
   --bg-light-grey     : #F9F9FB;
@@ -12,6 +18,7 @@
   --font-secondary    : #4a4a4a;
   --dark-green        : #063535;
   --text-disabled     : #878787;
+  --text-disabled-secondary     : #c5c5c5;
   /* subtract header and footer's height */
   --main-height       : calc(100vh - 5rem - 11rem);
   --main-mobile-height: calc(100vh - 5rem - 15rem);

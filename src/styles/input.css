@@ -1,0 +1,8 @@
+form input::placeholder {
+    color: var(--text-disabled);
+}
+
+form input:focus::placeholder {
+    color: var(--text-disabled-secondary);
+
+}
