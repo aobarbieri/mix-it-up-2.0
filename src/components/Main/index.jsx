@@ -5,6 +5,8 @@ import Recipes from '../../pages/Recipes'
 import Favorites from '../../pages/Favorites'
 import Login from '../User/Login'
 import Signup from '../User/Signup'
+import Profile from '../../pages/User'
+
 
 export default function Main() {
 	return (
@@ -16,6 +18,8 @@ export default function Main() {
 				<Route path='/favorites' element={<Favorites />} />
 				<Route path='/login' element={<Login />} />
 				<Route path='/signup' element={<Signup />} />
+				<Route path='/profile' element={<Profile />} />
+
 			</Routes>
 		</main>
 	)
