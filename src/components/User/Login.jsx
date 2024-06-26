@@ -1,26 +1,47 @@
 import { useState } from "react";
-import { login } from "../../utilities/user-service";
 import { Link } from "react-router-dom";
+import Snackbar from "@mui/material/Snackbar";
+import Alert from '@mui/material/Alert';
+import Slide from "@mui/material/Slide";
+// import { login } from "../../utilities/user-service";
+
+function SlideTransition(props) {
+  return <Slide {...props} direction="up" />;
+}
 
 export default function Login() {
-  const [user, setUser] = useState({
-    email: "",
-    password: "",
+  //   const [user, setUser] = useState({
+  //     email: "",
+  //     password: "",
+  //   });
+
+  //   function handleChange(e) {
+  //     setUser({ ...user, [e.target.name]: e.target.value });
+  //   }
+
+  // const userData = await login(user);
+  // console.log(userData);
+
+  // setUser({
+  //   email: "",
+  //   password: "",
+  // });
+
+  const [snack, setSnack] = useState({
+    open: false,
+    Transition: SlideTransition,
   });
 
-  function handleChange(e) {
-    setUser({ ...user, [e.target.name]: e.target.value });
-  }
+  const handleClose = (event, reason) => {
+    if (reason === "clickaway") {
+      return;
+    }
+    setSnack({ ...snack, open: false });
+  };
 
-  async function handleSubmit(e) {
+  function handleSubmit(e) {
     e.preventDefault();
-    const userData = await login(user);
-    console.log(userData);
-
-    setUser({
-      email: "",
-      password: "",
-    });
+    setSnack({ open: true, SlideTransition });
   }
 
   return (
@@ -34,19 +55,19 @@ export default function Login() {
             type="text"
             id="email"
             name="email"
-            value={user.email}
+            // value={user.email}
             placeholder="Email"
-            onChange={handleChange}
+            // onChange={handleChange}
           />
 
-          <label htmlFor="password">password</label>
+          <label htmlFor="password">Password</label>
           <input
             type="password"
             id="password"
             name="password"
-            value={user.password}
+            // value={user.password}
             placeholder="Password"
-            onChange={handleChange}
+            // onChange={handleChange}
           />
 
           <input className="btn-primary" type="submit" value="Log In" />
@@ -56,6 +77,22 @@ export default function Login() {
           New here? <Link to="/signup">Create new account</Link>
         </p>
       </section>
+
+      <Snackbar
+        open={snack.open}
+        TransitionComponent={snack.Transition}
+        autoHideDuration={5000}
+        onClose={handleClose}
+      >
+        <Alert
+          onClose={handleClose}
+          severity="info"
+          variant="filled"
+          sx={{ width: "100%" }}
+        >
+          Sorry! This feature is under maintenance at the moment.
+        </Alert>
+      </Snackbar>
     </div>
   );
 }
