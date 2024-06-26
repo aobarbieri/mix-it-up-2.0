@@ -50,7 +50,6 @@ export default function Login() {
         <h1>Login into Mix It Up</h1>
 
         <form onSubmit={handleSubmit}>
-          <label htmlFor="email">Email</label>
           <input
             type="text"
             id="email"
@@ -60,7 +59,6 @@ export default function Login() {
             // onChange={handleChange}
           />
 
-          <label htmlFor="password">Password</label>
           <input
             type="password"
             id="password"

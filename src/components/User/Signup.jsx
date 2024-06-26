@@ -49,52 +49,54 @@ export default function Signup() {
   }
 
   return (
-    <>
-      <h1>Create an account</h1>
+    <div className="user-container flex-center">
+      <section className="user-content">
+        <h1>Create a new account</h1>
 
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="name">Name</label>
-        <input
-          type="text"
-          id="name"
-          name="name"
-          value={user.name}
-          onChange={handleChange}
-        />
+        <form onSubmit={handleSubmit}>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Name"
+            value={user.name}
+            onChange={handleChange}
+          />
 
-        <label htmlFor="email">Email</label>
-        <input
-          type="text"
-          id="email"
-          name="email"
-          value={user.email}
-          onChange={handleChange}
-        />
+          <input
+            type="text"
+            id="email"
+            name="email"
+            placeholder="Email"
+            value={user.email}
+            onChange={handleChange}
+          />
 
-        <label htmlFor="password">password</label>
-        <input
-          type="password"
-          id="password"
-          name="password"
-          value={user.password}
-          onChange={handleChange}
-        />
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Password"
+            value={user.password}
+            onChange={handleChange}
+          />
 
-        <label htmlFor="passwordConfirm">Confirm Password</label>
-        <input
-          type="password"
-          id="passwordConfirm"
-          name="passwordConfirm"
-          value={user.passwordConfirm}
-          onChange={handleChange}
-        />
+          <input
+            type="password"
+            id="passwordConfirm"
+            name="passwordConfirm"
+            placeholder="Confirm Password"
+            value={user.passwordConfirm}
+            onChange={handleChange}
+          />
 
-        <input type="submit" value="Signup" />
-      </form>
+          <input className="btn-primary" type="submit" value="Signup" />
+        </form>
 
-      <p>
-        Already have an account? <Link to="/login">Login</Link>
-      </p>
+        <p>
+          Already have an account? <Link to="/login">Login</Link>
+        </p>
+      </section>
 
       <Snackbar
         open={snack.open}
@@ -111,6 +113,6 @@ export default function Signup() {
           Sorry! This feature is under maintenance at the moment.
         </Alert>
       </Snackbar>
-    </>
+    </div>
   );
 }
